@@ -15,8 +15,10 @@ mv "/home/$USER/1/$nazwa_pliku" "/home/$USER/chuj1/"
 # Przejście do katalogu repozytorium
 cd "/home/$USER/chuj1/"
 
+
 # Przywrócenie pliku pierdolnik2.sh z poprzedniego commita
 git checkout HEAD^ -- pierdolnik2.sh
+
 
 # Schowanie lokalnych zmian
 git stash
@@ -27,8 +29,11 @@ git pull origin main
 # Dodanie pliku wynikowego do listy plików do zacommitowania
 git add "$nazwa_pliku"
 
+
 # Dodanie pliku pierdolnik2.sh do listy plików do zacommitowania
 git add "pierdolnik2.sh"
+
+
 
 # Zatwierdzenie zmian
 git commit -m "Nowy raport: $nazwa_pliku"
